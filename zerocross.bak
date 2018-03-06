@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:zerocross-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -131,15 +132,11 @@ Wire Wire Line
 Wire Wire Line
 	6000 3500 6000 3450
 Wire Wire Line
-	6000 3150 6000 3050
+	6000 3150 6000 3100
 Wire Wire Line
 	6000 2750 6000 2700
 Wire Wire Line
 	6000 2700 6050 2700
-Wire Wire Line
-	6350 2700 6400 2700
-Wire Wire Line
-	6700 2700 6750 2700
 Wire Wire Line
 	6750 2700 6750 3700
 Wire Wire Line
@@ -156,7 +153,6 @@ Wire Wire Line
 	7600 2700 7500 2700
 Wire Wire Line
 	7200 2700 7100 2700
-Connection ~ 6750 2700
 Wire Wire Line
 	7100 2850 7100 2700
 Connection ~ 7100 2700
@@ -173,38 +169,35 @@ Wire Wire Line
 	6550 4050 6750 4050
 Connection ~ 6750 4050
 Wire Wire Line
-	5850 2700 6000 2700
-Connection ~ 6000 2700
+	5250 3100 5150 3100
 Wire Wire Line
-	5250 2700 5150 2700
-Wire Wire Line
-	5150 2700 5150 4050
+	5150 3100 5150 4050
 Wire Wire Line
 	5150 4050 6550 4050
 Connection ~ 6550 4050
 $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 5A9E007D
-P 4650 3050
-F 0 "J2" H 4570 2725 50  0000 C CNN
-F 1 "INPUT" H 4570 2816 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4650 3050 50  0001 C CNN
-F 3 "~" H 4650 3050 50  0001 C CNN
-	1    4650 3050
+P 4650 3450
+F 0 "J2" H 4570 3125 50  0000 C CNN
+F 1 "INPUT" H 4570 3216 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4650 3450 50  0001 C CNN
+F 3 "~" H 4650 3450 50  0001 C CNN
+	1    4650 3450
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4850 3050 5550 3050
+	4850 3450 5550 3450
 Wire Wire Line
-	5550 3050 5550 3000
+	5550 3450 5550 3400
 Wire Wire Line
-	4850 2950 5000 2950
+	4850 3350 5000 3350
 Wire Wire Line
-	5000 2950 5000 2300
+	5000 3350 5000 2700
 Wire Wire Line
-	5000 2300 5550 2300
+	5000 2700 5550 2700
 Wire Wire Line
-	5550 2300 5550 2400
+	5550 2700 5550 2800
 Wire Wire Line
 	8300 2800 8300 2700
 Wire Wire Line
@@ -272,22 +265,34 @@ $Comp
 L Diode:LL4148 D2
 U 1 1 5A9E72D4
 P 6550 2700
-F 0 "D2" H 6550 2916 50  0000 C CNN
-F 1 "LL4148" H 6550 2825 50  0000 C CNN
+F 0 "D2" H 6550 2484 50  0000 C CNN
+F 1 "LL4148" H 6550 2575 50  0000 C CNN
 F 2 "Diode_SMD:D_MiniMELF" H 6550 2525 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/85557/ll4148.pdf" H 6550 2700 50  0001 C CNN
 	1    6550 2700
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 $Comp
 L Diode_Bridge:MB6S D1
 U 1 1 5A9E77DB
-P 5550 2700
-F 0 "D1" H 5550 2700 50  0000 L CNN
-F 1 "MB6S" H 5300 2500 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TO-269AA" H 5700 2825 50  0001 L CNN
-F 3 "http://www.vishay.com/docs/88573/dfs.pdf" H 5550 2700 50  0001 C CNN
-	1    5550 2700
+P 5550 3100
+F 0 "D1" H 5550 3100 50  0000 L CNN
+F 1 "MB6S" H 5300 2900 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TO-269AA" H 5700 3225 50  0001 L CNN
+F 3 "http://www.vishay.com/docs/88573/dfs.pdf" H 5550 3100 50  0001 C CNN
+	1    5550 3100
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5850 3100 6000 3100
+Connection ~ 6000 3100
+Wire Wire Line
+	6000 3100 6000 3050
+Wire Wire Line
+	6400 2700 6350 2700
+Wire Wire Line
+	6700 2700 6750 2700
+Connection ~ 6750 2700
+Text Label 5900 3100 0    50   ~ 0
++
 $EndSCHEMATC
